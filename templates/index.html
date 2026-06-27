@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakEarn AI — Online Earning Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">₨</span>
+                <span class="logo-text">PakEarn AI</span>
+            </div>
+            <p class="logo-sub">Your Earning Guide</p>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="section-label">Quick Topics</p>
+            <button class="quick-btn" onclick="sendQuick('How can I start freelancing in Pakistan?')">
+                Freelancing Guide
+            </button>
+            <button class="quick-btn" onclick="sendQuick('Best platforms to earn online in Pakistan 2026')">
+                Top Platforms
+            </button>
+            <button class="quick-btn" onclick="sendQuick('How to receive payment in Pakistan from Fiverr?')">
+                Payment Methods
+            </button>
+            <button class="quick-btn" onclick="sendQuick('How much can I earn on YouTube in Pakistan?')">
+                YouTube Earning
+            </button>
+            <button class="quick-btn" onclick="sendQuick('Remote jobs for Pakistani students')">
+                Remote Jobs
+            </button>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="section-label">My Profile</p>
+            <div class="profile-box" id="profile-box">
+                <p class="profile-empty">Chat to build your profile</p>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <button class="clear-btn" onclick="clearChat()">New Conversation</button>
+        </div>
+    </div>
+
+    <!-- MAIN CHAT -->
+    <div class="main-area">
+
+        <!-- HEADER -->
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="ai-avatar">AI</div>
+                <div>
+                    <p class="header-title">PakEarn AI</p>
+                    <p class="header-sub">Online since 2026 · Pakistan focused</p>
+                </div>
+            </div>
+            <div class="header-badge">Live Web Search</div>
+        </div>
+
+        <!-- MESSAGES -->
+        <div class="messages-area" id="messages">
+
+            <!-- Welcome message -->
+            <div class="msg-row ai-row">
+                <div class="ai-bubble-avatar">AI</div>
+                <div class="bubble ai-bubble">
+                    <p>Assalam o Alaikum! 👋 I am <strong>PakEarn AI</strong> — your personal guide for earning online in Pakistan.</p>
+                    <p style="margin-top:8px">I can help you with:</p>
+                    <ul style="margin:6px 0 0 16px">
+                        <li>Finding the right freelancing platform for your skills</li>
+                        <li>Step-by-step earning strategies</li>
+                        <li>Realistic PKR + USD income estimates</li>
+                        <li>Payment methods that work in Pakistan</li>
+                    </ul>
+                    <p style="margin-top:8px">Tell me — <strong>what skills do you have?</strong></p>
+                    <span class="msg-time">Just now</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SEARCH INDICATOR -->
+        <div class="search-indicator" id="search-indicator">
+            Searching latest info from the web...
+        </div>
+
+        <!-- INPUT AREA -->
+        <div class="input-area">
+            <div class="input-box">
+                <textarea
+                    id="user-input"
+                    placeholder="Ask anything about earning online in Pakistan..."
+                    rows="1"
+                    onkeydown="handleKey(event)"
+                    oninput="autoResize(this)"
+                ></textarea>
+                <button class="send-btn" id="send-btn" onclick="sendMessage()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <p class="input-hint">Press Enter to send · Shift+Enter for new line</p>
+        </div>
+
+    </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
